@@ -12,6 +12,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      padding: {
+        '0.3': '0.075rem', // Add a custom padding value
+      },
     },
   },
   plugins: [],
