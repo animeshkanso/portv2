@@ -15,6 +15,10 @@ module.exports = {
       padding: {
         '0.3': '0.075rem', // Add a custom padding value
       },
+      fontFamily: {
+        instrument: ['Instrument Serif', 'sans-serif'],
+        outfit: ['Outfit Variable', 'sans-serif']
+    },
     },
   },
   plugins: [],
