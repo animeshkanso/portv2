@@ -20,6 +20,14 @@ const Navbar = () => {
           )}
         </a>
 
+        <a href="/work" className="relative flex items-center justify-center font-semibold">
+          {isActive('/work') ? (
+            <img src="/bag-filled.svg" alt="bag" />
+          ) : (
+            <img src="/bag.svg" alt="bag" />
+          )}
+        </a>
+
         <a href="https://x.com/animeshryu" target="_blank" className="relative flex items-center justify-center font-semibold">
           {isActive('/x') ? (
             <img src="/x-filled.svg" alt="x" />
@@ -33,14 +41,6 @@ const Navbar = () => {
             <img src="/insta-filled.svg" alt="insta" />
           ) : (
             <img src="/insta.svg" alt="insta" />
-          )}
-        </a>
-
-        <a href="/work" className="relative flex items-center justify-center font-semibold">
-          {isActive('/work') ? (
-            <img src="/bag-filled.svg" alt="bag" />
-          ) : (
-            <img src="/bag.svg" alt="bag" />
           )}
         </a>
         
