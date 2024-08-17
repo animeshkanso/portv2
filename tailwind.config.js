@@ -6,6 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'cu': '1520px'
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -14,6 +17,9 @@ module.exports = {
       },
       padding: {
         '0.3': '0.075rem', // Add a custom padding value
+      },
+      width: {
+        '0.3': '0.075rem'
       },
       fontFamily: {
         instrument: ['Instrument Serif', 'sans-serif'],
