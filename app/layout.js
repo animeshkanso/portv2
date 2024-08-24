@@ -14,18 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.className} bg-[#101115] min-h-screen text-white`}>
-        <ScrollProgressBar />
-        <div className="flex flex-col min-h-screen">
-          <main className="flex-grow flex flex-col items-center justify-center">
-            {children}
-          </main>
-          <footer className="flex justify-center py-4">
-            <Navbar />
-          </footer>
-        </div>
+      <body className={`${inter.className} bg-[#111216]`}>
+        {children}
+        <Navbar />
       </body>
     </html>
   );

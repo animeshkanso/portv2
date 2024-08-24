@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'cu': '1520px'
+      // Existing breakpoints like 'sm', 'md', etc., will be here
+      'cu': '1080px', // Custom breakpoint for 'cu'
     },
     extend: {
       backgroundImage: {

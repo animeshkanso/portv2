@@ -1,12 +1,10 @@
 "use client";
-const MainBody = () => {
+
+const MainBody = ({ children }) => {
   return (
-    <main className=" w-[1058px] p-4 mt-40 left-20 font-outfit">
-      <h1 className="text-2xl font-semibold mb-4">
-        What is the purpose of all of this?
-      </h1>
-      {/* Add more content here */}
-    </main>
+    <section className="w-[1058px] max-w-[1058px] min-h-screen flex items-center justify-center mx-auto text-white">
+      {children}
+    </section>
   );
 };
 
