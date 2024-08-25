@@ -2,7 +2,7 @@
 
 const MainBody = ({ children }) => {
   return (
-    <section className="w-[1058px] max-w-[1058px] min-h-screen flex items-center justify-center mx-auto text-white">
+    <section className="w-full min-h-screen flex items-start justify-center mx-auto text-white">
       {children}
     </section>
   );
