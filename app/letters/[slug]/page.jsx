@@ -2,6 +2,7 @@ import React from 'react'
 import getPostMetadata from '@/utils/getPostMetadata'
 import fs from 'fs'
 import matter from 'gray-matter'
+import Markdown from 'markdown-to-jsx'
 
 // This function generates static paths for each post based on its slug
 export async function generateStaticParams() {
