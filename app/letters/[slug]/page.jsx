@@ -1,18 +1,31 @@
-// app/letters/[slug]/page.js
+import React from 'react'
+import getPostMetadata from '@/utils/getPostMetadata'
+import fs from 'fs'
+import matter from 'gray-matter'
+
+// This function generates static paths for each post based on its slug
 export async function generateStaticParams() {
-  // Fetch the list of slugs from your data source
-  const slugs = await fetch('https://api.example.com/letters')
-    .then((res) => res.json())
-    .then((data) => data.map((item) => ({ slug: item.slug })));
-
-  return slugs.map((slug) => ({
-    params: { slug: slug.slug },
-  }));
+  const postMetaData = getPostMetadata('posts')
+  
+  return postMetaData.map((post) => ({
+    slug: post.slug,
+  }))
 }
 
-export default function LetterPage({ params }) {
-  const { slug } = params;
+const PostPage = ({ params }) => {
+  const { slug } = params
 
-  // Your component logic here
-  return <div>Letter with slug: {slug}</div>;
+  // Fetch the post content based on the slug
+  const fileContents = fs.readFileSync(`posts/${slug}.md`, 'utf-8')
+  const { content, data } = matter(fileContents)
+
+  return (
+    <div className="post-content text-white">
+      <h1>{data.title}</h1>
+      <p>{data.date}</p>
+      <div>{content}</div>
+    </div>
+  )
 }
+
+export default PostPage
