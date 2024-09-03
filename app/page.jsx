@@ -1,5 +1,6 @@
 "use client";
-import MainBody from "@/components/Mainbody";
+import ResponsiveCard from "@/components/Card";
+import MainBody from "@/components/MainBody";
 
 const Page = () => {
   return (
@@ -15,8 +16,13 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="w-full mt-32 left-4">
-        <p className="text-3xl">What do I do?</p>
+      <section className="flex flex-col md:flex-row w-full gap-6 justify-center min-h-screen mt-8 sm:mt-10 md:mt-44">
+
+          <ResponsiveCard content='Letter' href='/letters'/>
+
+          <ResponsiveCard content='Work' href='/work'/>
+
+          <ResponsiveCard content='Products' href='/products'/>
       </section>
     </MainBody>
   );
