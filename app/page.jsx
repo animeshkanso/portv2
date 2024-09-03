@@ -1,6 +1,6 @@
 "use client";
 import ResponsiveCard from "@/components/Card";
-import MainBody from "../components/MainBody";
+import MainBody from "./components/MainBody";
 
 const Page = () => {
   return (
