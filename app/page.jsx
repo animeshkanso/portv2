@@ -16,12 +16,6 @@ const Page = () => {
       </section>
 
       <section className="flex flex-col md:flex-row w-full gap-6 justify-center min-h-screen mt-8 sm:mt-10 md:mt-44">
-
-          <ResponsiveCard content='Letter' href='/letters'/>
-
-          <ResponsiveCard content='Work' href='/work'/>
-
-          <ResponsiveCard content='Products' href='/products'/>
       </section>
     </main>
   );
